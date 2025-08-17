@@ -1,0 +1,247 @@
+/* --- Global & Reset Styles --- */
+body {
+  margin: 0;
+  font-family: 'TT Lakes', 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #1b1c21;
+  min-width: 320px; /* For mobile version*/
+}
+
+button {
+  cursor: pointer;
+}
+
+/* --- Header Styles --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;/*24px padding below header*/
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9fff5;
+  height: 88px;
+  box-sizing: border-box; /* Include padding and border in the height */
+}
+
+.header__left,
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__logo {
+  height: 50px;
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border: none;
+  border-radius: 50%;
+}
+
+/*for mobile screen*/
+.show-on-desktop {
+  display: none; 
+}
+
+.show-on-extra-large {
+  display: none;
+}
+
+.label-for-xl_sreen {
+    display: none;
+  }
+
+.icons-for-extra-large {
+  display: none;
+}
+
+.divider {
+  width: 1px;
+  height: 32px;
+  background-color: #eaeaea;
+  border-radius: 1px;
+}
+
+/* --- Main Content Styles --- */
+.main-content {
+  padding: 24px;
+}
+
+.main-title {
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 24px 0;
+  position: relative;
+  padding-left: 12px;
+}
+
+/* Decorative bar on the left of the title */
+.main-title::before {
+  content: '';
+  position: absolute;
+  left: -16px; /* position outside of padding so that it aligns with mobile screen edge*/
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #41f6d7;
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- Navigation Tabs Styles --- */
+.tabs-nav {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto; /* for scrolling form left to right */
+  padding-bottom: 16px; /* Space for scrollbar */
+  margin-bottom: 24px;
+}
+
+
+  /* Hide scrollbar for a cleaner look */
+  /*-ms-overflow-style: none;
+  scrollbar-width: none;*/
+
+/*.tabs-nav::-webkit-scrollbar {
+  display: none; Chrome, Safari, and Opera */
+
+
+.tab-button {
+  flex-shrink: 0; /* Prevents buttons from shrinking */
+  white-space: nowrap; /* Prevents text from wrapping */
+  background: none;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #7e7e82;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab-button.active {
+  background-color: #ffffff;
+  border-color: #b8ffec;
+}
+
+.tab-button:hover {
+  background-color: #fff;
+  color: #1b1c21;
+}
+
+/* --- Content Block Styles --- */
+.content-block {
+  display: flex;
+  flex-direction: column; /*for mobile version*/
+  flex-wrap: wrap; /* Allows image to wrap below text on smaller screens */
+  gap: 16px; /*16 for mobile*/
+}
+
+.text-section {
+  flex: 1; /* Allows text section to grow */
+  min-width: 300px; /* Prevents it from getting too squished */
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.read-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1b1c21;
+  margin-top: 16px;
+}
+
+.image-section {
+  flex: 1; /* Allows image section to grow */
+  min-width: 300px;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  body{
+    min-width: 768px; /* For larger screens */
+  }
+
+  .show-on-desktop {
+    display: flex; /* Show icons on larger screens */
+  }
+
+  .main-title::before {
+    left:0px;
+  }
+
+  .content-block {
+    flex-direction: row;
+    gap: 32px; /* For tablet screen */
+  }
+
+}
+
+@media (min-width: 1120px) {
+  body{
+    min-width: 1120px; /* For larger screens */
+  }
+
+  .header{
+    display: none; /* Hide header on extra large screens */;
+  }
+
+  .sub-header {
+    display: flex; /* Show sub-header on extra large screens */
+    justify-content: space-between;
+    align-items: center;
+    
+   
+  }
+
+  .show-on-desktop {
+    display: none; 
+  }
+
+  .hide-on-extra-large {
+    display: none; /* Hide on extra large i.e burger and logo*/
+  }
+
+  .show-on-extra-large {
+    display: flex; /* Show on extra large */
+  }
+
+  .label-for-xl_sreen {
+    display: flex;
+  }
+
+  .icons-for-extra-large {
+    display: flex;
+    flex-direction: row; /* Show icons on extra large screens */
+    justify-content: center;
+    align-items: center;
+    gap: 16px; /* Space between icons */
+  }
+
+
+
+  .main-title {
+    font-size: 32px; /* Larger title for larger screens */
+  }
+
+  .tab-button {
+    padding: 12px 24px; /* Larger padding for tab buttons */
+    font-size: 18px; /* Larger font size for tab buttons */
+  }
+  
+}

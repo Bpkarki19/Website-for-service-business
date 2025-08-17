@@ -1,0 +1,33 @@
+# .gitattributes
+
+# Set the default behavior to automatically detect text files and normalize
+# all text files to use LF line endings.
+* text=auto eol=lf
+
+#
+# Explicitly declare text files to ensure they always have LF line endings.
+#
+*.html    text
+*.css     text
+*.js      text
+*.json    text
+*.md      text
+*.txt     text
+*.xml     text
+*.yml     text
+*.svg     text
+.gitignore  text
+.gitattributes text
+
+#
+# Declare specific files that are binary and should not be touched.
+#
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.pdf     binary
+*.zip     binary
+*.woff    binary
+*.woff2   binary
